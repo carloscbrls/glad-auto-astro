@@ -366,23 +366,40 @@ section {
   text-align: center;
 }
 .contact-card {
-  padding: 1.5rem;
+  padding: 1.5rem 1.25rem;
   border: 1px solid rgba(184,134,11,.25);
   border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
 }
 .contact-card .label {
   display: block;
-  font-size: .8rem;
+  font-size: .75rem;
   letter-spacing: .15em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: .5rem;
+  margin-bottom: .65rem;
+  line-height: 1;
 }
 .contact-card .value {
   font-family: var(--font-display);
-  font-size: 1.3rem;
-  letter-spacing: .03em;
+  font-size: clamp(1rem, 2.2vw, 1.35rem);
+  letter-spacing: .02em;
   color: var(--white);
+  line-height: 1.15;
+  word-break: break-word;
+  hyphens: auto;
+  max-width: 100%;
+}
+.contact-card .value.is-long {
+  font-size: clamp(.8rem, 1.4vw, .95rem);
+  letter-spacing: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  white-space: nowrap;
 }
 a.contact-card .value { color: var(--green-l); }
 a.contact-card:hover .value { color: var(--gold-l); }
