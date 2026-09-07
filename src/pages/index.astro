@@ -47,8 +47,8 @@ const services = [
         <span class="green">GLAD</span> Auto Sales<br />&amp; Services LLC
       </h1>
       <p class="tagline">
-        Lodi's trusted DMV partner for vehicle registration, title transfers,
-        dealer services, and salvage titles — since day one.
+        San Joaquin County's trusted DMV partner for vehicle registration,
+        title transfers, dealer services, and salvage titles.
       </p>
       <a href="tel:+12096015416" class="hero-cta">
         📞 Call 209.601.5416
@@ -61,7 +61,7 @@ const services = [
     <div class="container">
       <div class="section-head">
         <h2>What <span>We Do</span></h2>
-        <p>Four core services. Twenty-plus years of paperwork saved.</p>
+        <p>Four core services. We handle the paperwork the DMV doesn't make easy.</p>
       </div>
       <div class="services-grid">
         {services.map((s) => (
@@ -74,40 +74,77 @@ const services = [
     </div>
   </section>
 
-  <!-- ====== HOURS + LOCATION ====== -->
+  <!-- ====== HOURS + LOCATIONS ====== -->
   <section id="visit">
     <div class="container">
       <div class="section-head">
         <h2>Come <span>Visit</span></h2>
-        <p>Walk-ins welcome during business hours.</p>
-      </div>
-      <div class="info-strip">
-        <div class="info-block">
-          <h3>Hours</h3>
-          <p><strong>Monday – Saturday</strong></p>
-          <p>12:00 PM – 5:30 PM</p>
-          <p class="muted">Closed Sunday</p>
-        </div>
-        <div class="info-block">
-          <h3>Address</h3>
-          <p>617 E. Pine St</p>
-          <p>Lodi, CA 95240</p>
-          <p class="muted">Downtown Lodi — easy parking</p>
-        </div>
-        <div class="info-block">
-          <h3>Contact</h3>
-          <p><a href="tel:+12096015416">209.601.5416</a></p>
-          <p><a href="mailto:gladautosllc@yahoo.com">gladautosllc@yahoo.com</a></p>
-        </div>
+        <p>Two locations, seven-day coverage. Walk-ins welcome during business hours.</p>
       </div>
 
-      <div class="map-wrap">
-        <iframe
-          src="https://www.google.com/maps?q=617+E.+Pine+St,+Lodi,+CA+95240&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Glad Auto Sales & Services LLC location"
-        ></iframe>
+      <div class="locations-grid">
+        <!-- LODI -->
+        <article class="location-card">
+          <header class="location-head">
+            <span class="location-tag">Lodi</span>
+            <h3>617 E. Pine St</h3>
+            <p class="location-addr">Lodi, CA 95240</p>
+          </header>
+          <div class="location-hours">
+            <h4>Hours</h4>
+            <p class="hours-days">Monday – Thursday</p>
+            <p class="hours-time">12:00 PM – 5:30 PM</p>
+            <p class="hours-closed">Closed Friday – Sunday</p>
+          </div>
+          <div class="location-map">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-121.2660%2C38.1310%2C-121.2530%2C38.1380&amp;layer=mapnik&amp;marker=38.13449%2C-121.25964"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Glad Auto Sales & Services LLC — Lodi location, 617 E. Pine St"
+              allowfullscreen
+            ></iframe>
+            <a href="https://www.openstreetmap.org/?mlat=38.13449&amp;mlon=-121.25964#map=17/38.13449/-121.25964" target="_blank" rel="noopener" class="map-link">
+              Open in maps ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- STOCKTON -->
+        <article class="location-card">
+          <header class="location-head">
+            <span class="location-tag">Stockton</span>
+            <h3>712 W. Swain Rd</h3>
+            <p class="location-addr">Stockton, CA 95207</p>
+          </header>
+          <div class="location-hours">
+            <h4>Hours</h4>
+            <p class="hours-days">Friday – Sunday</p>
+            <p class="hours-time">1:00 PM – 7:00 PM</p>
+            <p class="hours-closed">Open holidays · Closed Mon – Thu</p>
+          </div>
+          <div class="location-map">
+            <iframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-121.3250%2C38.0000%2C-121.3130%2C38.0080&amp;layer=mapnik&amp;marker=38.0041%2C-121.31917"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Glad Auto Sales & Services LLC — Stockton location, 712 W. Swain Rd"
+              allowfullscreen
+            ></iframe>
+            <a href="https://www.openstreetmap.org/?mlat=38.0041&amp;mlon=-121.31917#map=17/38.0041/-121.31917" target="_blank" rel="noopener" class="map-link">
+              Open in maps ↗
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="contact-shared">
+        <p>
+          <strong>One phone, two locations:</strong>
+          <a href="tel:+120****5416">209.601.5416</a>
+          &nbsp;·&nbsp;
+          <a href="mailto:gladautosllc@yahoo.com">gladautosllc@yahoo.com</a>
+        </p>
       </div>
     </div>
   </section>
@@ -120,7 +157,7 @@ const services = [
         <p>One call clears up what would take you three trips to the DMV.</p>
       </div>
       <div class="contact-grid">
-        <a href="tel:+12096015416" class="contact-card">
+        <a href="tel:+120****5416" class="contact-card">
           <span class="label">Call Now</span>
           <span class="value">209.601.5416</span>
         </a>
@@ -128,9 +165,13 @@ const services = [
           <span class="label">Email</span>
           <span class="value">gladautosllc@yahoo.com</span>
         </a>
-        <a href="https://maps.google.com/?q=617+E.+Pine+St,+Lodi,+CA+95240" target="_blank" rel="noopener" class="contact-card">
-          <span class="label">Walk In</span>
+        <a href="https://www.openstreetmap.org/?mlat=38.13449&mlon=-121.25964#map=17/38.13449/-121.25964" target="_blank" rel="noopener" class="contact-card">
+          <span class="label">Lodi</span>
           <span class="value">617 E. Pine St</span>
+        </a>
+        <a href="https://www.openstreetmap.org/?mlat=38.0041&mlon=-121.31917#map=17/38.0041/-121.31917" target="_blank" rel="noopener" class="contact-card">
+          <span class="label">Stockton</span>
+          <span class="value">712 W. Swain Rd</span>
         </a>
       </div>
     </div>
@@ -140,11 +181,20 @@ const services = [
   <footer>
     <div class="container">
       <p>
-        <span class="gold">GLAD</span> Auto Sales &amp; Services LLC &nbsp;·&nbsp;
-        617 E. Pine St, Lodi, CA 95240 &nbsp;·&nbsp;
-        <a href="tel:+12096015416">209.601.5416</a>
+        <span class="gold">GLAD</span> Auto Sales &amp; Services LLC
       </p>
-      <p style="margin-top:.5rem;font-size:.8rem;">
+      <p style="margin-top:.5rem;">
+        <strong>Lodi:</strong> 617 E. Pine St, Lodi, CA 95240 &nbsp;·&nbsp; Mon–Thu 12–5:30 PM
+      </p>
+      <p>
+        <strong>Stockton:</strong> 712 W. Swain Rd, Stockton, CA 95207 &nbsp;·&nbsp; Fri–Sun + Holidays 1–7 PM
+      </p>
+      <p style="margin-top:.5rem;">
+        <a href="tel:+120****5416">209.601.5416</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:gladautosllc@yahoo.com">gladautosllc@yahoo.com</a>
+      </p>
+      <p style="margin-top:1rem;font-size:.8rem;">
         © {new Date().getFullYear()} Glad Auto Sales &amp; Services LLC. All rights reserved.
       </p>
     </div>
