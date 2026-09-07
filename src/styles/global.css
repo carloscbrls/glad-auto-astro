@@ -1,0 +1,313 @@
+/* ============================================================
+   Glad Auto Sales & Services LLC — Brand Stylesheet
+   Color anchors from physical signage:
+     --black   #000000   background, SUV silhouette ground
+     --gold    #B8860B   accents, SUV, wordmark outline
+     --green   #228B22   primary CTA, GLAD wordmark fill
+     --white   #FFFFFF   body text, phone CTA
+   Type pairing:
+     Anton     headings  (Impact-style display sans)
+     Inter     body      (clean modern sans)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --black:  #000000;
+  --gold:   #B8860B;
+  --gold-l: #E5B533;
+  --green:  #228B22;
+  --green-l:#2E8B2E;
+  --white:  #FFFFFF;
+  --muted:  #B8B8B8;
+
+  --font-display: 'Anton', 'Impact', 'Arial Black', sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --maxw: 1100px;
+  --pad:  clamp(1rem, 4vw, 2.5rem);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a {
+  color: var(--gold-l);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+a:hover { color: var(--green-l); }
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  border-top: 1px solid rgba(184,134,11,.18);
+}
+
+/* ============================================================
+   TOP NAV
+   ============================================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(0,0,0,.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(184,134,11,.25);
+}
+.nav-inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: .9rem var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  letter-spacing: .04em;
+  color: var(--green);
+  text-shadow:
+    1px 1px 0 var(--gold),
+    2px 2px 0 rgba(184,134,11,.5);
+}
+.brand-sub {
+  display: block;
+  font-family: var(--font-body);
+  font-size: .7rem;
+  letter-spacing: .15em;
+  color: var(--muted);
+  text-transform: uppercase;
+  text-shadow: none;
+  margin-top: 2px;
+}
+.nav-cta {
+  background: var(--green);
+  color: var(--white);
+  padding: .6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: .95rem;
+  white-space: nowrap;
+  transition: background .15s ease;
+}
+.nav-cta:hover { background: var(--green-l); color: var(--white); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  padding: clamp(4rem, 12vw, 8rem) 0 clamp(3rem, 8vw, 5rem);
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center top, rgba(34,139,34,.12) 0%, transparent 60%),
+    var(--black);
+  border-top: none;
+}
+.hero-logo {
+  max-width: 520px;
+  margin: 0 auto 2rem;
+  filter: drop-shadow(0 0 30px rgba(184,134,11,.25));
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: .02em;
+  margin: 0 0 1rem;
+  color: var(--white);
+}
+.hero h1 span.green {
+  color: var(--green);
+  text-shadow:
+    2px 2px 0 var(--gold),
+    4px 4px 0 rgba(184,134,11,.4);
+}
+.hero .tagline {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--muted);
+  margin: 0 auto 2.5rem;
+  max-width: 640px;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  background: var(--green);
+  color: var(--white);
+  padding: 1.1rem 2.2rem;
+  border-radius: 6px;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition: transform .15s ease, background .15s ease;
+  border: 2px solid transparent;
+}
+.hero-cta:hover {
+  background: var(--green-l);
+  color: var(--white);
+  transform: translateY(-2px);
+  border-color: var(--gold);
+}
+
+/* ============================================================
+   SERVICES GRID
+   ============================================================ */
+.section-head {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-head h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: .03em;
+  margin: 0 0 .5rem;
+  color: var(--white);
+}
+.section-head h2 span { color: var(--green); }
+.section-head p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.service-card {
+  background: linear-gradient(180deg, rgba(184,134,11,.08) 0%, rgba(0,0,0,0) 100%);
+  border: 1px solid rgba(184,134,11,.3);
+  border-radius: 6px;
+  padding: 1.75rem 1.5rem;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.service-card:hover {
+  border-color: var(--green);
+  transform: translateY(-3px);
+}
+.service-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: .03em;
+  color: var(--green);
+  margin: 0 0 .5rem;
+}
+.service-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .98rem;
+}
+
+/* ============================================================
+   INFO STRIP (hours + address)
+   ============================================================ */
+.info-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+.info-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: .05em;
+  color: var(--gold-l);
+  margin: 0 0 .75rem;
+  text-transform: uppercase;
+}
+.info-block p { margin: .25rem 0; color: var(--white); }
+.info-block .muted { color: var(--muted); font-size: .95rem; }
+
+/* ============================================================
+   MAP
+   ============================================================ */
+.map-wrap {
+  margin-top: 2.5rem;
+  border: 1px solid rgba(184,134,11,.3);
+  border-radius: 6px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: invert(.9) hue-rotate(180deg);
+}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+.contact-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(184,134,11,.25);
+  border-radius: 6px;
+}
+.contact-card .label {
+  display: block;
+  font-size: .8rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .5rem;
+}
+.contact-card .value {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: .03em;
+  color: var(--white);
+}
+a.contact-card .value { color: var(--green-l); }
+a.contact-card:hover .value { color: var(--gold-l); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  border-top: 1px solid rgba(184,134,11,.2);
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
+}
+footer .gold { color: var(--gold-l); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 540px) {
+  .nav-cta { font-size: .85rem; padding: .5rem .9rem; }
+  .brand { font-size: 1.3rem; }
+  .brand-sub { display: none; }
+}

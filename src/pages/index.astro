@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: 'Vehicle Registration',
+    desc: 'Out-of-state transfers and new plates handled start to finish. We file the paperwork, you walk out legal.',
+  },
+  {
+    title: 'Title Transfers',
+    desc: 'Commercial vehicles, private sales, inherited titles — whatever the chain, we cut through the DMV red tape.',
+  },
+  {
+    title: 'Dealer Services',
+    desc: 'Lien sales and dealer paperwork support for independent lots and private sellers across San Joaquin County.',
+  },
+  {
+    title: 'Salvage Titles',
+    desc: 'Salvage title processing and re-titling for rebuilt vehicles. We know the forms the DMV doesn\'t put on the website.',
+  },
+];
+---
+
+<Layout>
+  <!-- ====== TOP NAV ====== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <div>
+        <span class="brand">GLAD</span>
+        <span class="brand-sub">Auto Sales &amp; Services LLC</span>
+      </div>
+      <a href="tel:+12096015416" class="nav-cta">Call 209.601.5416</a>
+    </div>
+  </nav>
+
+  <!-- ====== HERO ====== -->
+  <header class="hero">
+    <div class="container">
+      <img
+        src="/images/glad-logo-sign.jpg"
+        alt="Glad Auto Sales & Services LLC — Gold SUV over bold green GLAD wordmark"
+        class="hero-logo"
+        width="520"
+        height="520"
+      />
+      <h1>
+        <span class="green">GLAD</span> Auto Sales<br />&amp; Services LLC
+      </h1>
+      <p class="tagline">
+        Lodi's trusted DMV partner for vehicle registration, title transfers,
+        dealer services, and salvage titles — since day one.
+      </p>
+      <a href="tel:+12096015416" class="hero-cta">
+        📞 Call 209.601.5416
+      </a>
+    </div>
+  </header>
+
+  <!-- ====== SERVICES ====== -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>What <span>We Do</span></h2>
+        <p>Four core services. Twenty-plus years of paperwork saved.</p>
+      </div>
+      <div class="services-grid">
+        {services.map((s) => (
+          <article class="service-card">
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== HOURS + LOCATION ====== -->
+  <section id="visit">
+    <div class="container">
+      <div class="section-head">
+        <h2>Come <span>Visit</span></h2>
+        <p>Walk-ins welcome during business hours.</p>
+      </div>
+      <div class="info-strip">
+        <div class="info-block">
+          <h3>Hours</h3>
+          <p><strong>Monday – Saturday</strong></p>
+          <p>12:00 PM – 5:30 PM</p>
+          <p class="muted">Closed Sunday</p>
+        </div>
+        <div class="info-block">
+          <h3>Address</h3>
+          <p>617 E. Pine St</p>
+          <p>Lodi, CA 95240</p>
+          <p class="muted">Downtown Lodi — easy parking</p>
+        </div>
+        <div class="info-block">
+          <h3>Contact</h3>
+          <p><a href="tel:+12096015416">209.601.5416</a></p>
+          <p><a href="mailto:gladautosllc@yahoo.com">gladautosllc@yahoo.com</a></p>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=617+E.+Pine+St,+Lodi,+CA+95240&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Glad Auto Sales & Services LLC location"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== CONTACT CTA ====== -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2>Let's <span>Talk</span></h2>
+        <p>One call clears up what would take you three trips to the DMV.</p>
+      </div>
+      <div class="contact-grid">
+        <a href="tel:+12096015416" class="contact-card">
+          <span class="label">Call Now</span>
+          <span class="value">209.601.5416</span>
+        </a>
+        <a href="mailto:gladautosllc@yahoo.com" class="contact-card">
+          <span class="label">Email</span>
+          <span class="value">gladautosllc@yahoo.com</span>
+        </a>
+        <a href="https://maps.google.com/?q=617+E.+Pine+St,+Lodi,+CA+95240" target="_blank" rel="noopener" class="contact-card">
+          <span class="label">Walk In</span>
+          <span class="value">617 E. Pine St</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <div class="container">
+      <p>
+        <span class="gold">GLAD</span> Auto Sales &amp; Services LLC &nbsp;·&nbsp;
+        617 E. Pine St, Lodi, CA 95240 &nbsp;·&nbsp;
+        <a href="tel:+12096015416">209.601.5416</a>
+      </p>
+      <p style="margin-top:.5rem;font-size:.8rem;">
+        © {new Date().getFullYear()} Glad Auto Sales &amp; Services LLC. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</Layout>

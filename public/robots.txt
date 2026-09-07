@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gladautosllc.netlify.app/sitemap-index.xml
