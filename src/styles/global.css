@@ -307,6 +307,21 @@ section {
   font-style: italic;
 }
 
+.location-hours .hours-highlight {
+  display: inline-block;
+  margin-top: .35rem;
+  padding: .3rem .6rem;
+  background: var(--green);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: .85rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-style: normal;
+}
+
 .location-map {
   margin-top: 1.25rem;
   border-radius: 4px;
